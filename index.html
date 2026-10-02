@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CyberKit</title>
+  <meta name="description" content="A hacker-themed, browser-only cybersecurity toolkit for learning.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header>
+    <h1 class="glitch" data-text="CYBERKIT">CYBERKIT</h1>
+    <p class="tag">&gt; browser-only security toolkit_ <span class="blink">█</span></p>
+  </header>
+
+  <nav id="tabs">
+    <button data-tab="terminal" class="active">terminal</button>
+    <button data-tab="password">password</button>
+    <button data-tab="hash">hash</button>
+    <button data-tab="cipher">cipher</button>
+    <button data-tab="jwt">jwt</button>
+  </nav>
+
+  <main>
+    <!-- TERMINAL -->
+    <section id="terminal" class="panel active">
+      <div id="term-out"></div>
+      <div class="term-line">
+        <span class="prompt">root@cyberkit:~$</span>
+        <input id="term-in" autocomplete="off" spellcheck="false" aria-label="terminal input">
+      </div>
+    </section>
+
+    <!-- PASSWORD -->
+    <section id="password" class="panel">
+      <h2>// password strength analyzer</h2>
+      <input id="pw" type="text" placeholder="type a password (never leaves your browser)" autocomplete="off">
+      <div class="meter"><div id="pw-bar"></div></div>
+      <pre id="pw-report" class="out"></pre>
+    </section>
+
+    <!-- HASH -->
+    <section id="hash" class="panel">
+      <h2>// hash generator</h2>
+      <textarea id="hash-in" placeholder="text to hash"></textarea>
+      <pre id="hash-out" class="out"></pre>
+      <h2>// hash identifier</h2>
+      <input id="hashid-in" placeholder="paste a hash, e.g. 5f4dcc3b5aa765d61d8327deb882cf99">
+      <pre id="hashid-out" class="out"></pre>
+    </section>
+
+    <!-- CIPHER -->
+    <section id="cipher" class="panel">
+      <h2>// cipher lab</h2>
+      <textarea id="ci-in" placeholder="input text">Uryyb, unpxre! Gur synt vf: PLOREXVG</textarea>
+      <div class="row">
+        <select id="ci-mode">
+          <option value="rot13">ROT13</option>
+          <option value="caesar">Caesar (shift)</option>
+          <option value="brute">Caesar brute-force</option>
+          <option value="vig-e">Vigenère encrypt</option>
+          <option value="vig-d">Vigenère decrypt</option>
+          <option value="b64-e">Base64 encode</option>
+          <option value="b64-d">Base64 decode</option>
+          <option value="hex-e">Hex encode</option>
+          <option value="hex-d">Hex decode</option>
+          <option value="bin-e">Binary encode</option>
+          <option value="bin-d">Binary decode</option>
+          <option value="morse-e">Morse encode</option>
+          <option value="morse-d">Morse decode</option>
+        </select>
+        <input id="ci-key" placeholder="shift / key" value="3">
+        <button id="ci-run">run</button>
+      </div>
+      <pre id="ci-out" class="out"></pre>
+    </section>
+
+    <!-- JWT -->
+    <section id="jwt" class="panel">
+      <h2>// jwt decoder &amp; auditor</h2>
+      <textarea id="jwt-in" placeholder="paste a JSON Web Token">eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiIxMzM3IiwibmFtZSI6Im5lbyIsImFkbWluIjp0cnVlfQ.</textarea>
+      <pre id="jwt-out" class="out"></pre>
+    </section>
+  </main>
+
+  <footer>for education &amp; defense only · everything runs locally in your browser</footer>
+  <script src="app.js"></script>
+</body>
+</html>
