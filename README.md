@@ -1,6 +1,8 @@
 # CYBERKIT
 
 > A hacker-themed cybersecurity toolkit that runs entirely in your browser.
+>
+> **[▶ Try it live](https://aziz4rehman-hue.github.io/cyberkit/)**
 
 No install, no server, no tracking. Open `index.html` and start exploring. Nothing you type ever leaves your machine.
 
@@ -30,7 +32,7 @@ Paste `Uryyb, unpxre!` into the cipher lab and hit **ROT13**, or try the Caesar 
 ## Run it
 
 - **Locally:** download the repo and double-click `index.html`.
-- **Online:** enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / root).
+- **Online:** https://aziz4rehman-hue.github.io/cyberkit/ (hosted on GitHub Pages)
 
 ## What I learned
 
